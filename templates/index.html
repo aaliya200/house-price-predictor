@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Predict House Price</title></head>
+<body>
+  <h2>House Price Prediction</h2>
+  <form action="/predict" method="post">
+    {% for i in range(13) %}
+      <input name="feature{{i}}" placeholder="Feature {{i+1}}" required><br><br>
+    {% endfor %}
+    <button type="submit">Predict</button>
+  </form>
+  <h3>{{ prediction_text }}</h3>
+</body>
+</html>
